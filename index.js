@@ -51,9 +51,23 @@
 const prompt = require("prompt-sync")();
 
 let n = prompt("Enter the number of rows: ");
+
+
+// for (let i=1;i<=n;i++){
+//     for( let j=1;j<=n;j++){
+//          process.stdout.write("* ");
+//     }
+//     console.log();
+// }
+
+
+
 for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <=n -i +1; j++) {
-        process.stdout.write( "* ");
+    let line = "";
+
+    for (let j = 0; j < i; j++) {
+        line += String.fromCharCode(65 + j) + " ";
     }
-    console.log();
+
+    console.log(line);
 }
